@@ -7,7 +7,6 @@
         margin-top: 50px;
         font-size: 25px;
         background-color: darkslategrey;
-
     }
 
     h1 {
@@ -19,20 +18,18 @@
 
 <!--##NO predefine-->
 <body>
-    <h1>Advance Calculator!</h1>  <br>
-    <img width="20%" height="20%" src="{{url_for('static', filename='img.png') }} " />
+    <h1>Advanced Calculator</h1><br>
+    <img src="{{url_for('static', filename = 'img.png')}}" width="150" height="150">
     <form method="POST">
-        <label >Enter expression</label><br><br>
+        <label>Enter Expression</label><br>
         <select class="is-focused is-large" name="operation" aria-label="operationDropdown">
-            <option>Choose operation</option>
+            <option>Choose Operation</option>
             <option value="simplify">Simplify</option>
             <option value="factor">Factor</option>
         </select>
-    <input placeholder="Expression" name="text">
-    <input type="submit">
-</form>
-
-
-    <p>Your equation is {{equation}} = {{ result }}</p>
+        <input placeholder="Expression" name="text">
+        <input type="submit">
+    </form>
+    <p>Your Equation is {{equation}} = {{result}}</p>
 </body>
 </html>
